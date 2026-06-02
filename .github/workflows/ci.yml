@@ -1,5 +1,6 @@
 name: CI - Testes PHP
 
+# Quando o workflow será executado
 on:
   push:
     branches: [ main ]
@@ -11,13 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1) Baixar o código do repositório
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
+      # 2) Instalar PHP na máquina de CI do GitHub
       - name: Configurar PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
 
+      # 3) Rodar os testes
       - name: Executar testes PHP
         run: php src/test.php
