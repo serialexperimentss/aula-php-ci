@@ -4,9 +4,9 @@ require_once __DIR__ . '/Calculator.php';
 
 try {
     // -------- TESTES DE SOMA --------
-    if (Calculator::soma(2, 3) !== 99) {
-        throw new Exception('soma(2, 3) deve retornar 99');
-    }
+    if (Calculator::soma(2, 3) !== 5) {
+    throw new Exception('soma(2, 3) deve retornar 5');
+}
 
     if (Calculator::soma(-1, 4) !== 3) {
         throw new Exception('soma(-1, 4) deve retornar 3');
